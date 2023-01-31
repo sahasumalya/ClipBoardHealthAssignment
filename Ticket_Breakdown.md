@@ -26,8 +26,18 @@ Ticket-1:- a.A spike story investigating regarding the data storage in databases
            e.Need to understand how 'getShiftsByFacility' function is fetching data from DB and have to return custom agent id with the results.
 
 Ticket-2:- .Make the database schema changes.Add the column in agents table may be.
+
+
 Ticket-3:-. Make the backend api change to store custom agentid in db.
+
+
 Ticket-4:-  Make the UI changes in the form to be submiited by facility to add agents to consume the custom agentID and use the new api version for submitting the form.
+
+
 Ticket-5:- Make changes in the getShiftsByFacility function to get the custom agentID and change the column  name of the agentId in report generation if required.
+
+
 Ticket-6:- Add instrumentation logs to monitor the analytics and failures, also add feature flag to roll out the feature by throttling(first 10%, 20% so on) with the help of running experiments.
+
+
 Ticket-7:- Performance testing.
