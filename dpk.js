@@ -9,7 +9,8 @@ exports.deterministicPartitionKey = (event) => {
     if (event.partitionKey) {
       candidate = event.partitionKey;
     } else {
-      candidate = crypto.createHash("sha3-512").update(JSON.stringify(event)).digest("hex");
+      const data = JSON.stringify(event);
+      candidate = crypto.createHash("sha3-512").update(data).digest("hex");
     }
   }
 
