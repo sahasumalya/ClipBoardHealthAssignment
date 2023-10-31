@@ -8,7 +8,8 @@ Ticket breakdown is related to chunking the big story into small tickets, which 
 
 
 ## [Refactoring](Refactoring.md)
-Refactoring is important for making sure the code is maintainable and modularised, ensuring each functionality is just doing it's job.
+Refactoring is important for making sure the code is maintainable and modularised, ensuring each functionality is just doing its job.
+Refactoring is a systematic process of improving code without creating new functionality that can transform a mess into clean code and simple design.
 
 
 If you are a JS novice, here's how to get started:
@@ -16,3 +17,5 @@ If you are a JS novice, here's how to get started:
 2. Run `npm i` in this repo to install dependencies
 3. Run `npm test` to run the automated tests
 4. Run `npm start` to launch `index.js` for any manual testing
+
+Good Luck!!!
