@@ -52,3 +52,7 @@ exports.refactoredDeterministicPartitionKey = (event) => {
   return candidate;
   
 };
+
+exports.createDBConnection = (event) => {
+  console.log('Creating DB connection');
+}
