@@ -1,18 +1,20 @@
-This project contains two challenges - a "Ticket Breakdown" challenge and a "Refactoring" challenge. The two challenges are unrelated, but you should complete both in the same folder and share the link in Coderbyte. Any written answers should be included in markdown files within this folder.
+# ClipBoardHealthAssignment
 
+This repository contains two distinct challenges: the "Ticket Breakdown" challenge and the "Refactoring" challenge. Although these challenges are separate, they should both be completed within the same folder. Once finished, please share the link to your completed project on Coderbyte. Any written responses should be documented in markdown files within this directory.
 
+## Ticket Breakdown Challenge
+The Ticket Breakdown challenge involves breaking down a larger story into smaller, manageable tickets. This process aids in estimating story points and effort required for implementation.
 
+For detailed instructions, refer to [Ticket_Breakdown.md](Ticket_Breakdown.md).
 
-## [Ticket Breakdown](Ticket_Breakdown.md)
-Ticket breakdown is related to chunking the big story into small tickets, which can help with story point estimation and effort estimation.
+## Refactoring Challenge
+Refactoring is a crucial step in ensuring code maintainability and modularity. It involves optimizing existing code to ensure each component performs its designated task efficiently.
 
+For detailed instructions, refer to [Refactoring.md](Refactoring.md).
 
-## [Refactoring](Refactoring.md)
-Refactoring is important for making sure the code is maintainable and modularised, ensuring each functionality is just doing it's job.
+If you are new to JavaScript, follow these steps to get started:
 
-
-If you are a JS novice, here's how to get started:
-1. [Install Node.js](https://nodejs.org/en/download/) (we use `^16`, the latest LTS)
-2. Run `npm i` in this repo to install dependencies
-3. Run `npm test` to run the automated tests
-4. Run `npm start` to launch `index.js` for any manual testing
+1. [Install Node.js](https://nodejs.org/en/download/) (we recommend using version `^16`, which is the latest LTS).
+2. Run `npm i` in this repository to install dependencies.
+3. Execute `npm test` to run automated tests.
+4. Launch `index.js` for manual testing by running `npm start`.
