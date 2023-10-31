@@ -3,7 +3,6 @@ const crypto = require("crypto");
 exports.deterministicPartitionKey = (event) => {
   const TRIVIAL_PARTITION_KEY = "0";
   const MAX_PARTITION_KEY_LENGTH = 256;
-  let candidate;
 
   if (event) {
     if (event.partitionKey) {
@@ -12,25 +11,21 @@ exports.deterministicPartitionKey = (event) => {
       candidate = crypto.createHash("sha3-512").update(JSON.stringify(event)).digest("hex");
     }
   }
+  let candidate = event?.partitionKey || event || TRIVIAL_PARTITION_KEY;
 
-  if (candidate) {
-    if (typeof candidate !== "string") {
-      candidate = JSON.stringify(candidate);
-    }
-  } else {
-    candidate = TRIVIAL_PARTITION_KEY;
+  if (typeof candidate !== "string") {
+    candidate = JSON.stringify(candidate);
   }
+
   if (candidate.length > MAX_PARTITION_KEY_LENGTH) {
     candidate = crypto.createHash("sha3-512").update(candidate).digest("hex");
   }
-  return candidate;
-  
-};
 
+  return candidate;
+};
 exports.refactoredDeterministicPartitionKey = (event) => {
   const TRIVIAL_PARTITION_KEY = "0";
   const MAX_PARTITION_KEY_LENGTH = 256;
-
   const createHash = (input)=>{
     if(typeof input !== "string" || !event?.partitionKey) { // for event objects excluding obejcts coming from partitionKey
       input = JSON.stringify(input);
@@ -51,3 +46,7 @@ exports.refactoredDeterministicPartitionKey = (event) => {
   return candidate;
   
 };
+
+exports.createDBConnection = (event) => {
+  console.log('Creating DB connection');
+}
